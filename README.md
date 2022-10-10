@@ -26,6 +26,12 @@ Must have to install node js in your operating system
 <br>
 <br>
 
+## Follow these steps for running the boilerplate
+
+<br>
+
+<ol>
+<li>
 Install Dependencies
 
 ```bash
@@ -38,16 +44,31 @@ If you need or want update these dependencies by this command
 npm i express cors dotenv mongoose nodemon colors
 ```
 
-Just you create a env file. Like this
+</li>
+<li>
+Just you create a env file. Like this name
 
 ```bash
 .env
 ```
 
-Insert the line and replace by yours information
+</li>
+<li>
+Insert the line in the env and replace by yours information
 
 ```bash
 DB_URI="your_db_connection_uri/your_database_name"
 ```
+
+</li>
+<li>
+Server run command
+
+```bash
+nodemon server
+```
+
+</li>
+</ol>
 
 [Visit My Website](https://imshama.com)
