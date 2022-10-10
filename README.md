@@ -7,7 +7,7 @@
 This boilerplate is follow MVC with service pattern architecture. Here I use
 
 <ul>
-<li>Node Js - for server runnig</li>
+<li>Node Js - for server running</li>
 <li>Express Js - for create API easily</li>
 <li>Dotenv - for environement varriable</li>
 <li>Cors - for middleware</li>
