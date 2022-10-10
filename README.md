@@ -1,9 +1,7 @@
 <hr>
-<hr>
 
 ## **_Node, Express and Mongoose Boilerplate_**
 
-<hr>
 <hr>
 
 This boilerplate is follow MVC with service pattern architecture. Here I use
