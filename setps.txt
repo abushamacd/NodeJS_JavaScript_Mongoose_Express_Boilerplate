@@ -1,0 +1,3 @@
+npm init -y
+install dependency
+npm i express cors dotenv mongoose nodemon colors bcrypt body-parser concurrently cookie-parser cookie-parser jsonwebtoken validator
