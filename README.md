@@ -60,6 +60,8 @@ Insert the line in the env and replace by yours information
 DB_URI="your_db_connection_uri/your_database_name"
 ```
 
+> N.B: sometimes localhost default connection string (mongodb://localhost:27017) not working so connect string will modify like as (mongodb://127.0.0.1:27017)
+
 </li>
 <li>
 Server run command
