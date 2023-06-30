@@ -9,11 +9,16 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "http-status": "^1.6.2",
     "mongoose": "^6.6.5",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "winston": "^3.9.0",
+    "winston-daily-rotate-file": "^4.7.1",
+    "zod": "^3.21.4"
   },
   "author": "",
   "license": "ISC"
