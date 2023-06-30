@@ -5,3 +5,4 @@ node_modules
 ds_store
 *.env
 package-lock.json
+yarn.lock
