@@ -20,11 +20,25 @@ This boilerplate is follow MVC with service pattern architecture. Here I use
 
 <br>
 
+### Notice - Alert
+
+Recommanded
+
+<hr>
+
+> For Module pattern use V3 branch code boilerplate
+
+> For MVC pattern use V2 branch code boilerplate
+
+> V1 branch not to use because of there have some bug.
+
+> After clone this boilerplate first remove the .git folder
+
+<br>
+
 ### Pre Requirments
 
-Must have to install node js and yarn in your operating system
-<br>
-<br>
+> Must have to install node js and yarn in your operating system
 
 ## Follow these steps for running the boilerplate
 
