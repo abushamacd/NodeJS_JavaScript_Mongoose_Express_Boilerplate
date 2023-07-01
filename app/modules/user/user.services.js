@@ -1,11 +1,13 @@
 const httpStatus = require("http-status");
-const { ApiError } = require("../../src/errors/apiError");
-const { calculatePagination } = require("../../src/helpers/paginationHelpers");
-const { userSearchableFields } = require("../constants/user.constant");
-const User = require("../models/user.model");
-const { generateUserId } = require("../utilities/user.utils");
+const { ApiError } = require("../../../src/errors/apiError");
+const {
+  calculatePagination,
+} = require("../../../src/helpers/paginationHelpers");
+const { userSearchableFields } = require("./user.constant");
+const User = require("./user.model");
+const { generateUserId } = require("./user.utils");
 const bcrypt = require("bcrypt");
-const config = require("../../src/config");
+const config = require("../../../src/config");
 
 exports.createUserService = async (payload) => {
   payload.role = "user";

@@ -1,4 +1,4 @@
-const { role } = require("../constants/user.constant");
+const { role } = require("./user.constant");
 const { z } = require("zod");
 
 exports.createUserZod = z.object({
@@ -22,12 +22,7 @@ exports.createUserZod = z.object({
 });
 exports.updateUserZod = z.object({
   body: z.object({
-    name: z
-      .object({
-        firstName: z.string().optional(),
-        lastName: z.string().optional(),
-      })
-      .optional(),
+    name: z.string().optional(),
     phoneNumber: z.string().optional(),
     email: z.string().optional(),
     password: z.string().optional(),

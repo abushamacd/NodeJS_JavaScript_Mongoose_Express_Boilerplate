@@ -1,11 +1,11 @@
-const { sendRes } = require("../../src/utilities/sendRes");
-const { tryCatch } = require("../../src/utilities/tryCatch");
+const { sendRes } = require("../../../src/utilities/sendRes");
+const { tryCatch } = require("../../../src/utilities/tryCatch");
 const {
   loginUserService,
   refreshTokenService,
   changePasswordService,
-} = require("../services/auth.services");
-const config = require("../../src/config");
+} = require("./auth.services");
+const config = require("../../../src/config");
 
 exports.loginUser = tryCatch(async (req, res) => {
   const result = await loginUserService(req.body);

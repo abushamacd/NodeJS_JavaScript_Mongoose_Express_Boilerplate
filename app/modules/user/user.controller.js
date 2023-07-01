@@ -1,16 +1,16 @@
 const httpStatus = require("http-status");
-const { sendRes } = require("../../src/utilities/sendRes");
-const { tryCatch } = require("../../src/utilities/tryCatch");
+const { sendRes } = require("../../../src/utilities/sendRes");
+const { tryCatch } = require("../../../src/utilities/tryCatch");
 const {
   createUserService,
   getAllUsersService,
   getSingleUserService,
   updateUserService,
   deleteUserService,
-} = require("../services/user.services");
-const { paginationFields } = require("../../src/constants/pagination");
-const { pick } = require("../../src/utilities/pick");
-const { userFilterableFields } = require("../constants/user.constant");
+} = require("./user.services");
+const { paginationFields } = require("../../../src/constants/pagination");
+const { pick } = require("../../../src/utilities/pick");
+const { userFilterableFields } = require("./user.constant");
 
 exports.createUser = tryCatch(async (req, res) => {
   const result = await createUserService(req.body);

@@ -1,8 +1,8 @@
 const httpStatus = require("http-status");
-const { ApiError } = require("../../src/errors/apiError");
-const User = require("../models/user.model");
-const { createToken, verifyToken } = require("../../src/helpers/jwtHelpers");
-const config = require("../../src/config");
+const { ApiError } = require("../../../src/errors/apiError");
+const User = require("../user/user.model");
+const { createToken, verifyToken } = require("../../../src/helpers/jwtHelpers");
+const config = require("../../../src/config");
 const bcrypt = require("bcrypt");
 
 exports.loginUserService = async (payload) => {

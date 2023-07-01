@@ -1,16 +1,13 @@
 const express = require("express");
-const { reqValidate } = require("../../src/middleware/reqValidate");
-const {
-  createUserZod,
-  updateUserZod,
-} = require("../validation/user.validation");
+const { reqValidate } = require("../../../src/middleware/reqValidate");
+const { createUserZod, updateUserZod } = require("./user.validation");
 const {
   createUser,
   getAllUsers,
   getSingleUser,
   updateUser,
   deleteUser,
-} = require("../controllers/user.controller");
+} = require("./user.controller");
 const router = express.Router();
 
 router.route("/").post(reqValidate(createUserZod), createUser).get(

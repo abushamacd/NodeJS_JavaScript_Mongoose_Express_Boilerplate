@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
-const { role } = require("../constants/user.constant");
+const { role } = require("./user.constant");
 const bcrypt = require("bcrypt");
-const config = require("../../src/config");
+const config = require("../../../src/config");
 
 const userSchema = new Schema(
   {

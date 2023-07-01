@@ -1,4 +1,4 @@
-const User = require("../models/user.model");
+const User = require("./user.model");
 
 const findLastUserId = async () => {
   const lastUser = await User.findOne(
