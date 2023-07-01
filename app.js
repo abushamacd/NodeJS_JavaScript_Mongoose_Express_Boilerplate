@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const httpStatus = require("http-status");
 const cookieParser = require("cookie-parser");
-const dataRoute = require("./app/routes/data.route");
+const routes = require("./app/routes/index");
 const { globalError } = require("./middleware/globalError");
 const { sendRes } = require("./utilities/sendRes");
 
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 // Data Route
-app.use("/api/v1/data", dataRoute);
+app.use("/api/v1", routes);
 
 // Handle Error || Close App
 app.use(globalError);
