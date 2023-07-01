@@ -1,5 +1,5 @@
 const express = require("express");
-const { reqValidate } = require("../../middleware/reqValidate");
+const { reqValidate } = require("../../src/middleware/reqValidate");
 const {
   createUserZod,
   updateUserZod,

@@ -22,7 +22,7 @@ This boilerplate is follow MVC with service pattern architecture. Here I use
 
 ### Pre Requirments
 
-Must have to install node js in your operating system
+Must have to install node js and yarn in your operating system
 <br>
 <br>
 
@@ -35,18 +35,18 @@ Must have to install node js in your operating system
 Install Dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 If you need or want update these dependencies by this command
 
 ```bash
-npm i express cors dotenv mongoose nodemon colors
+yarn add express cors dotenv mongoose nodemon colors bcrypt cookie-parser http-status jsonwebtoken winston winston-daily-rotate-file zod
 ```
 
 </li>
 <li>
-Just you create a env file. Like this name
+Just you create a env file in root folder. Like this name
 
 ```bash
 .env
@@ -57,7 +57,14 @@ Just you create a env file. Like this name
 Insert the line in the env and replace by yours information
 
 ```bash
-DB_URI="your_db_connection_uri/your_database_name"
+DB_URI=yours_database_string
+NODE_ENV=developement
+PORT=5000
+BCRYPT_SOLT_ROUND=give_a_number_of_how_much_time_you_want_to_rounding._like_10
+JWT_SECRET='your_secret'
+JWT_REFRESH_SECRET='your_refresh_secret'
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_EXPIRES_IN=365d
 ```
 
 > N.B: sometimes localhost default connection string (mongodb://localhost:27017) not working so connect string will modify like as (mongodb://127.0.0.1:27017)
@@ -67,7 +74,7 @@ DB_URI="your_db_connection_uri/your_database_name"
 Server run command
 
 ```bash
-nodemon server
+yarn dev
 ```
 
 </li>

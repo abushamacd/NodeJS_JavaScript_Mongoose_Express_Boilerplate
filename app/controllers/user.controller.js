@@ -1,6 +1,6 @@
 const httpStatus = require("http-status");
-const { sendRes } = require("../../utilities/sendRes");
-const { tryCatch } = require("../../utilities/tryCatch");
+const { sendRes } = require("../../src/utilities/sendRes");
+const { tryCatch } = require("../../src/utilities/tryCatch");
 const {
   createUserService,
   getAllUsersService,
@@ -8,8 +8,8 @@ const {
   updateUserService,
   deleteUserService,
 } = require("../services/user.services");
-const { paginationFields } = require("../../constants/pagination");
-const { pick } = require("../../utilities/pick");
+const { paginationFields } = require("../../src/constants/pagination");
+const { pick } = require("../../src/utilities/pick");
 const { userFilterableFields } = require("../constants/user.constant");
 
 exports.createUser = tryCatch(async (req, res) => {

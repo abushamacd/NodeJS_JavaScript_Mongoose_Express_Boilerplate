@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const httpStatus = require("http-status");
 const cookieParser = require("cookie-parser");
-const routes = require("./app/routes/index");
+const routes = require("../app/routes/index");
 const { globalError } = require("./middleware/globalError");
 const { sendRes } = require("./utilities/sendRes");
 

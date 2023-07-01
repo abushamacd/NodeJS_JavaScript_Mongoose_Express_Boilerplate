@@ -2,10 +2,10 @@
   "name": "node_express_mongoose_boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start": "node src/server",
+    "dev": "nodemon src/server"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",

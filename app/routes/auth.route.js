@@ -1,5 +1,5 @@
 const express = require("express");
-const { reqValidate } = require("../../middleware/reqValidate");
+const { reqValidate } = require("../../src/middleware/reqValidate");
 const {
   loginUserZod,
   refreshTokenZod,
@@ -10,8 +10,8 @@ const {
   refreshToken,
   changePassword,
 } = require("../controllers/auth.controller");
-const { USER_ROLE } = require("../../constants/user");
-const { auth } = require("../../middleware/auth");
+const { USER_ROLE } = require("../../src/constants/user");
+const { auth } = require("../../src/middleware/auth");
 
 const router = express.Router();
 
