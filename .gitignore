@@ -7,4 +7,5 @@ ds_store
 package-lock.json
 yarn.lock
 *.log
+*.log.*
 *audit.json

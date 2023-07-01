@@ -52,24 +52,22 @@ const userSchema = new Schema(
 );
 
 // Existency Check
-//   userSchema.statics.isExist = async function (
-//     phoneNumber: string
-//   ): Promise<Pick<IUser, 'phoneNumber' | 'password' | 'role' | '_id'> | null> {
-//     return await User.findOne(
-//       { phoneNumber },
-//       { phoneNumber: 1, password: 1, role: 1 }
-//     )
-//   }
+userSchema.statics.isExist = async function (email) {
+  return await User.findOne(
+    { email },
+    { email: 1, password: 1, role: 1, id: 1, _id: 1 }
+  );
+};
 
-//   // Password Match
-//   userSchema.statics.isPasswordMatched = async function (
-//     givenPassword: string,
-//     savedPassword: string
-//   ): Promise<boolean> {
-//     return await bcrypt.compare(givenPassword, savedPassword)
-//   }
+// Password Match
+userSchema.statics.isPasswordMatched = async function (
+  givenPassword,
+  savedPassword
+) {
+  return await bcrypt.compare(givenPassword, savedPassword);
+};
 
-//   // Password Encrypt
+// Password Encrypt
 userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(
     this.password,
@@ -78,4 +76,6 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-exports.User = model("User", userSchema);
+const User = model("User", userSchema);
+
+module.exports = User;
